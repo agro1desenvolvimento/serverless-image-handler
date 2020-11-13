@@ -24,7 +24,7 @@ exports.handler = async (event) => {
         const processedRequest = await imageHandler.process(request);
 
         const headers = getResponseHeaders();
-        headers["Content-Type"] = request.ContentType;
+        headers["Content-Type"] = 'image/jpeg';
         headers["Expires"] = request.Expires;
         headers["Last-Modified"] = request.LastModified;
         headers["Cache-Control"] = request.CacheControl;
